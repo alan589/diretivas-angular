@@ -1,0 +1,22 @@
+
+<section>
+  <article>
+    <h3>Diretiva *ngIf</h3>
+
+    <p *ngIf="mostrarCurso">Lista de cursos</p>
+    <p *ngIf="!mostrarCurso">Cursos escondidos</p>
+
+    <button type="button" name="button" (click)="alternarCurso()">
+      <span [hidden]="!mostrarCurso">Esconder cursos</span>
+      <span [hidden]="mostrarCurso">Mostrar cursos</span>
+    </button>
+
+
+    <!--
+    <ng-template [ngIf]="mostrarCurso">
+        <div>Lista de cursos aqui.</div>
+    </ng-template>
+    -->
+
+  </article>
+</section>

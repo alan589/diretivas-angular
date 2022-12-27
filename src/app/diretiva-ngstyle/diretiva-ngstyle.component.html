@@ -1,0 +1,18 @@
+<section>
+  <article>
+    <h3>Diretiva ngStyle</h3>
+    <button (click)="ativo = !ativo" type="button" name="button" [ngStyle]="{
+      'color': ativo ? 'white' : 'black',
+      'backgroundColor': ativo ? 'blue' : 'gray',
+      'fontWeight': ativo ? 'bold' : 'normal',
+      'fontSize': tamanhoDaFonte + 'px'
+    }">Mudar atributo ativo</button>
+
+
+
+    <br><br><br>
+    <label for="">Mudar tamanho da fonte: </label>
+    <input type="number" [(ngModel)]="tamanhoDaFonte">
+
+  </article>
+</section>

@@ -1,0 +1,24 @@
+
+<section>
+  <article>
+    <h3>Diretiva *ngSwitch</h3>
+    <ul class="nav nav-pills">
+      <li class="nav-item">
+        <a class="nav-link" [class.active]="aba === 'Home'" aria-current="page" (click)="aba = 'Home'" href="#">Home</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" [class.active]="aba === 'Pricing'" (click)="aba = 'Pricing'" href="#">Pricing</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" [class.active]="aba === 'About'" (click)="aba = 'About'" href="#">About</a>
+      </li>
+    </ul>
+
+    <div class="switch" [ngSwitch]="aba">
+      <p *ngSwitchCase="'Home'">aba Home ativada</p>
+      <p *ngSwitchCase="'Pricing'">aba Pricing ativada</p>
+      <p *ngSwitchCase="'About'">aba about ativada</p>
+      <p *ngSwitchDefault>Nenhuma aba ativada</p>
+    </div>
+  </article>
+</section>

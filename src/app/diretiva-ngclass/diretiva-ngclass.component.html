@@ -1,0 +1,21 @@
+<section>
+  <article>
+    <h3>Diretiva ngClass</h3>
+
+    <div>
+      <span>class property binding: </span>
+      <i [style.cursor]="'pointer'" (click)="meuFavorito = !meuFavorito"
+      class="bi" [class.bi-star]="meuFavorito" [class.bi-star-fill]="!meuFavorito"></i>
+    </div>
+    <div>
+      <span>ngClass property binding: </span>
+      <i [style.cursor]="'pointer'" (click)="meuFavorito = !meuFavorito" [ngClass]="{
+        'bi-star-fill': !meuFavorito,
+        'bi-star': meuFavorito
+      }">
+      </i>
+    </div>
+
+
+  </article>
+</section>
