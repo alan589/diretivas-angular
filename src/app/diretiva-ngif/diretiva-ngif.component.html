@@ -3,8 +3,14 @@
   <article>
     <h3>Diretiva *ngIf</h3>
 
-    <p *ngIf="mostrarCurso">Lista de cursos</p>
-    <p *ngIf="!mostrarCurso">Cursos escondidos</p>
+    <!-- <p *ngIf="mostrarCurso">Lista de cursos</p>
+    <p *ngIf="!mostrarCurso">Cursos escondidos</p> -->
+
+    <!-- versão nova  -->
+    <p *ngIf="mostrarCurso; else elseBlock">Lista de cursos</p>
+    <ng-template #elseBlock>
+      <p>Cursos escondidos</p>
+    </ng-template>
 
     <button type="button" name="button" (click)="alternarCurso()">
       <span [hidden]="!mostrarCurso">Esconder cursos</span>

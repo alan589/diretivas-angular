@@ -1,0 +1,26 @@
+<section>
+  <article>
+    <h3>Diretivas Customizadas</h3>
+    <p FundoAzulClaro>Texto com fundo azul claro </p>
+    <p highlightMouse>Texto fica com fundo azul ao passar o mouse</p>
+    <!-- <p highlight [highlightColor]="'red'" [defaultColor]="'grey'">Texto com highlight com cores customizadas</p> -->
+
+    <!-- input property com o mesmo nome da diretiva customizadas -->
+    <p [highlight]="'red'" [defaultColor]="'grey'">Texto com highlight com cores customizadas</p>
+
+    <p *ngIf="mostrarCurso">Lista de cursos</p>
+    <p *ngElse="mostrarCurso">Cursos escondidos</p>
+
+    <!-- ou utilizando templates-->
+
+    <ng-template [ngElse]="mostrarCurso">
+      <p>Cursos escondidos</p>
+    </ng-template>
+
+    <button type="button" name="button" (click)="alternarCurso()">
+      <span [hidden]="!mostrarCurso">Esconder cursos</span>
+      <span [hidden]="mostrarCurso">Mostrar cursos</span>
+    </button>
+
+  </article>
+</section>
